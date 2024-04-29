@@ -1,13 +1,12 @@
-function quicksort(array) {
+function quicksort(arr) {
     let stack = [];
     stack.push(0);
-    stack.push(array.length - 1);
+    stack.push(arr.length - 1);
 
-    while (stack.length > 0) {
+    while (stack.length) {
         let end = stack.pop();
         let start = stack.pop();
-
-        let pivotIndex = partition(array, start, end);
+        let pivotIndex = partition(arr, start, end);
 
         if (pivotIndex - 1 > start) {
             stack.push(start);
@@ -20,21 +19,20 @@ function quicksort(array) {
         }
     }
 
-    return array;
+    return arr;
 }
 
-function partition(array, start, end) {
-    let pivot = array[end];
-    let i = start;
+function partition(arr, start, end) {
+    let pivot = arr[end];
+    let pivotIndex = start;
 
-    for (let j = start; j < end; j++) {
-        if (array[j] < pivot) {
-            [array[i], array[j]] = [array[j], array[i]];
-            i++;
+    for (let i = start; i < end; i++) {
+        if (arr[i] < pivot) {
+            [arr[i], arr[pivotIndex]] = [arr[pivotIndex], arr[i]];
+            pivotIndex++;
         }
     }
 
-    [array[i], array[end]] = [array[end], array[i]];
-
-    return i;
+    [arr[pivotIndex], arr[end]] = [arr[end], arr[pivotIndex]];
+    return pivotIndex;
 }
