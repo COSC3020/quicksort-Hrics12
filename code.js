@@ -1,4 +1,7 @@
 function quicksort(arr) {
+    if(arr.length === 0){
+        return [];
+    }
     let stack = [];
     stack.push(0);
     stack.push(arr.length - 1);
