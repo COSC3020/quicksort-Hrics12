@@ -22,3 +22,4 @@ be chosen as the pivot. The theta bound would be $O(n^2)$ because the partition 
 
 
 https://www.geeksforgeeks.org/hoares-vs-lomuto-partition-scheme-quicksort/
+https://dev.to/henryong92/quick-sort-14d9
