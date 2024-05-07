@@ -19,7 +19,7 @@ The worst case for this would be if the partition function doesn't split the arr
 be chosen as the pivot. The theta bound would be $O(n^2)$ because the partition function take $O(n)$ time and needs to be called $n$ times. The first call will go through $n$ elements the the second call would process $n-1$ elements and so on until the last call that would process 1 element. So, $(n*(n+1))/2$ and that's $O(n^2)$
 
 
-
+Source:
 
 https://www.geeksforgeeks.org/hoares-vs-lomuto-partition-scheme-quicksort/
 
